@@ -93,17 +93,16 @@ background: #b7d9d6;
 	z-index: 99;
 }
 
-/*
+
 .mist{
 	width: 60%;
 	height: 50px;
-	background: rgba(255,255,255,.4);
+	background: rgba(255,255,255,.04);
 	position: absolute;
 	margin: 0 auto;
-	bottom: 33%;
+	bottom: 10%;
 	z-index: 40;
-	-webkit-transform: translateX(-100%);
-	-webkit-animation: mistOne 30s infinite ease-out 5s;
+	-webkit-animation: mistTwo 30s infinite ease-out ;
 }
 
 .mist:before{
@@ -111,12 +110,12 @@ background: #b7d9d6;
 	display: block;
 	width: 60%;
 	height: 50px;
-	background: rgba(255,255,255,.2);
+	background: rgba(255,255,255,.02);
 	position: absolute;
 	margin: 0 auto;
 	top: 133%;
 	z-index: 40;
-	-webkit-animation: mistOne 50s infinite ease-out;
+	-webkit-animation: mistTwo 50s infinite ease-out;
 }
 
 .mist:after{
@@ -124,13 +123,13 @@ background: #b7d9d6;
 	display: block;
 	width: 30%;
 	height: 50px;
-	background: rgba(255,255,255,.2);
+	background: rgba(255,255,255,.02);
 	position: absolute;
 	margin: 0 auto;
 	top: -133%;
 	z-index: 40;
-	-webkit-animation: mistOne 60s infinite ease-out;
-}*/
+	-webkit-animation: mistTwo 60s infinite ease-out;
+}
 
 .smog{
 	width: 60%;
@@ -182,6 +181,20 @@ background: #b7d9d6;
 
    100% { 
    -webkit-transform: translateX(60%);
+     }   
+}
+
+@-webkit-keyframes mistTwo {
+   0% { 
+   -webkit-transform: translateX(40%);
+    }
+    
+	50% { 
+	-webkit-transform: translateX(40%);
+	 }
+
+   100% { 
+   -webkit-transform: translateX(10%);
      }   
 }
 .cloud{
@@ -289,113 +302,6 @@ background: #b7d9d6;
 	border-radius: 50%;
 }
 
-/*
-
-@-webkit-keyframes color {
-	0%{
-		background: linear-gradient(to bottom, #000000 85%,#000000 100%); 
-	}
-
-  4.3% {
-    background: linear-gradient(to bottom, #020111 85%,#191621 100%);
-  }
-
-  8.6% {
-    background: linear-gradient(to bottom, #020111 60%,#20202c 100%);
-  }
-  
-  12.9%{
-  	background: linear-gradient(to bottom, #020111 10%,#3a3a52 100%);
-  }
-  
-  17.2%{
-  	background: linear-gradient(to bottom, #20202c 0%,#515175 100%);
-  }
-  
-  21.5%{
-  	background: linear-gradient(to bottom, #40405c 0%,#6f71aa 80%,#8a76ab 100%);
-  }
-
-	25.8%{
-		background: linear-gradient(to bottom, #4a4969 0%,#7072ab 50%,#cd82a0 100%);
-	}
-	
-	30.1%{
-		background: linear-gradient(to bottom, #757abf 0%,#8583be 60%,#eab0d1 100%);
-	}
-	
-	34.4%{
-		background: linear-gradient(to bottom, #82addb 0%,#ebb2b1 100%);
-	}
-	
-	38.7%{
-		background: linear-gradient(to bottom, #94c5f8 1%,#a6e6ff 70%,#b1b5ea 100%);
-	}
-	
-	43%{
-		background: linear-gradient(to bottom, #b7eaff 0%,#94dfff 100%);
-	}
-	
-	47.3%{
-		background: linear-gradient(to bottom, #9be2fe 0%,#67d1fb 100%);
-	}
-	
-	51.6%{
-		background: linear-gradient(to bottom, #90dffe 0%,#38a3d1 100%);
-	}
-	
-	55.9%{
-		background: linear-gradient(to bottom, #57c1eb 0%,#246fa8 100%);
-	}
-	
-	60.2%{
-		background: linear-gradient(to bottom, #2d91c2 0%,#1e528e 100%);
-	}
-	
-	64.5%{
-		background: linear-gradient(to bottom, #2473ab 0%,#1e528e 70%,#5b7983 100%);
-	}
-	
-	68.8%{
-		background: linear-gradient(to bottom, #1e528e 0%,#265889 50%,#9da671 100%);
-	}
-	
-	73.1%{
-		background: linear-gradient(to bottom, #1e528e 0%,#728a7c 50%,#e9ce5d 100%);
-	}
-	
-	77.4%{
-		background: linear-gradient(to bottom, #154277 0%,#576e71 30%,#e1c45e 70%,#b26339 100%);
-	}
-	
-	81.7%{
-		background: linear-gradient(to bottom, #163C52 0%,#4F4F47 30%,#C5752D 60%,#B7490F 80%, #2F1107 100%);
-	}
-	
-	86%{
-		background: linear-gradient(to bottom, #071B26 0%,#071B26 30%,#8A3B12 80%,#240E03 100%);
-	}
-	
-	90.3%{
-		background: linear-gradient(to bottom, #010A10 30%,#59230B 80%,#2F1107 100%);
-	}
-	
-	94.6%{
-		background: linear-gradient(to bottom, #090401 50%,#4B1D06 100%);
-	}
-	
-	98.9%{
-		background: linear-gradient(to bottom, #00000c 80%,#150800 100%);
-	}
-	
-	100%{
-		background: linear-gradient(to bottom, #000000 85%,#000000 100%);
-	}
-
-
-
-}*/
-
 
 
 
@@ -413,12 +319,10 @@ background: #b7d9d6;
 @-webkit-keyframes start {
    0% { 
    opacity: 0;
-   /*background: url('mountainfront.png') repeat-x center 105%,  url('mountainback.png') repeat-x center 107%;*/
    -webkit-transform: translateY(50px);
     }
    100% { 
    opacity: 1;
-/*   background: url('mountainfront.png') repeat-x center 100%,  url('mountainback.png') repeat-x center 100%;*/
 -webkit-transform: translateY(0px);
      }   
 }
