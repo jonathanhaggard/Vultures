@@ -639,3 +639,9 @@ background: #b7d9d6;
    opacity: 1;
      }   
 }
+
+@media screen and (device-aspect-ratio: 40/71) {
+.rainclouds{
+	display: none;
+}
+}
