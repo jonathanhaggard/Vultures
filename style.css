@@ -432,10 +432,23 @@ background: #b7d9d6;
 	margin-top: 1000px;
 	-webkit-transform-origin: 50% 50% 0px !important;
 	-webkit-transform: rotateY(0deg) translate3d(0, 0px, 0px) scale(2) !important;
+	-webkit-transition: all 500ms cubic-bezier(1.000, 0, 0.600, 0.510) !important; /* older webkit */
+	-webkit-transition: all 500ms cubic-bezier(1.000, -0.005, 0.600, 0.510) !important; 
+	   -moz-transition: all 500ms cubic-bezier(1.000, -0.005, 0.600, 0.510) !important; 
+	     -o-transition: all 500ms cubic-bezier(1.000, -0.005, 0.600, 0.510) !important; 
+	        transition: all 500ms cubic-bezier(1.000, -0.005, 0.600, 0.510) !important; /* custom */
 }
 
 .flockdive{
 	margin-top: 1000px;
+	
+	-webkit-transition: all 500ms cubic-bezier(1.000, 0, 0.600, 0.510) !important; /* older webkit */
+	-webkit-transition: all 500ms cubic-bezier(1.000, -0.005, 0.600, 0.510) !important; 
+	   -moz-transition: all 500ms cubic-bezier(1.000, -0.005, 0.600, 0.510) !important; 
+	     -o-transition: all 500ms cubic-bezier(1.000, -0.005, 0.600, 0.510) !important; 
+	        transition: all 500ms cubic-bezier(1.000, -0.005, 0.600, 0.510) !important; /* custom */
+	
+	
 }
 
 .diver{
@@ -451,6 +464,8 @@ background: #b7d9d6;
 	-webkit-backface-visibility: visible;
 	-webkit-transform-style: preserve-3d;
 	-webkit-animation: flyFour 10s infinite linear;
+	
+
 }
 .yum{
 	width: 2px;
