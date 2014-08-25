@@ -51,15 +51,18 @@
 	
 	<div class="atmosphere"></div>
 	
-	
+	<div class="carcas"></div>
 	
 	<div class="mist"></div>
 	
 	<div class="smog"></div>
 	
 <!--	<div class="tinySun"></div>-->
-	<div class="mtnBig"></div>
-	
+
+	<div class="mtnHolder">
+		<div class="mtnBig"></div>
+		<div class="tinySun"></div>
+	</div>
 	<div class="sky">
 		<div class="burdholder">
 			<div class="burd"></div>
@@ -77,11 +80,11 @@
 	<iframe width="300px" height="200px" class="spotify"  scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/20540444&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
 	
 	<div class="tint"></div>
-	
+	<p class="text">Fear the vulture, and the vulture will come.</p>
 	<script>
 	
 		
-		$( ".mtnBig" ).click(function() {
+		$( ".mtnHolder" ).click(function() {
 		  $( this ).toggleClass( "float" );
 		  $( ".spotify" ).toggleClass( "spotifyfloat" );
 		  
