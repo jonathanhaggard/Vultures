@@ -1,4 +1,4 @@
-CSS3 Vultures and day cycle
+CSS3 mountain environment
 
 
 [DEMO](http://jonathanhaggard.github.io/Vultures/)

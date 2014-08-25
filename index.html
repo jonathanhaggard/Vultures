@@ -17,7 +17,7 @@
     		
 		<link rel="stylesheet" type="text/css" href="style.css" />
 		<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
-		
+		<script src="jquery.transit.min.js"></script>
 		<!--[if IE]>
   		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
@@ -27,9 +27,9 @@
 <canvas id="canvas" style="position : absolute; top : 0px; left : 0px;"></canvas>
 
 <!--	<div class="sun"></div>-->
-	
+	<div class="clickaplease"></div>
 	<div class="cloud"></div>
-	<div class="rainclouds">
+<!--	<div class="rainclouds">
 	<svg version="1.1" id="clouds" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 		  viewBox="0 0 1920 274.604" enable-background="new 0 0 1920 274.604" xml:space="preserve">
 	<path fill="#FFFFFF" d="M0,0v263c91.202,0,171.551-46.43,218.727-116.935c3.071-4.59,9.707-7.164,15.115-6.043
@@ -43,11 +43,21 @@
 		C1748.449,216.57,1828.798,263,1920,263V0H0z"/>
 	</svg>
 	
-	</div>
+	</div>-->
+	
+	<div class="ozone"></div>
+	
+	<div class="stratosphere"></div>
+	
+	<div class="atmosphere"></div>
+	
+	
+	
 	<div class="mist"></div>
 	
 	<div class="smog"></div>
 	
+<!--	<div class="tinySun"></div>-->
 	<div class="mtnBig"></div>
 	
 	<div class="sky">
@@ -63,23 +73,53 @@
 	  </div>	
 	</div>
 	
+	
+	<iframe width="300px" height="200px" class="spotify"  scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/20540444&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+	
+	<div class="tint"></div>
+	
 	<script>
-	$( "body" ).click(function() {
-	  $( this ).toggleClass( "active" );
-	  $( ".diver" ).toggleClass( "godive" );
-	  
-	  
-	  $('.burd').each(function(i){
-		var randomnumber=Math.floor(Math.random()*4);
-	    var row = $(this);
-	    setTimeout(function() {
-	      row.toggleClass('flockdive');
-	    }, 100*randomnumber*i);
-	  })
-	  
-	  
-	});
-						
+	
+		
+		$( ".mtnBig" ).click(function() {
+		  $( this ).toggleClass( "float" );
+		  $( ".spotify" ).toggleClass( "spotifyfloat" );
+		  
+//		  
+//		  
+//		  $('.burd').each(function(i){
+//			var randomnumber=Math.floor(Math.random()*4);
+//		    var row = $(this);
+//		    setTimeout(function() {
+//		      row.toggleClass('flockdive');
+//		    }, 100*randomnumber*i);
+//		  })
+		  
+		  
+		});
+		$(document).ready(function(e) {
+
+		    $('.sky').click(function(e) {
+		        var posX = $(this).position().left,posY = $(this).position().top;
+		        
+//		        alert( (e.pageX - posX) + ' , ' + (e.pageY - posY));
+
+		        var burdX = e.pageX - posX;
+		        var burdY = e.pageY - posY;
+		        
+		        
+		        $('.clickaplease').css({left:burdX,top:burdY}).addClass("clicked");
+		        
+		        var delay = setTimeout(function(){
+		                $(".clickaplease").removeClass("clicked");
+		             }, 1000)
+		        
+		        
+		        $('.burdholder').transition({left:burdX,top:burdY}, 3000, 'cubic-bezier(.58,.27,.19,1.14)');
+		        
+		        
+		    });
+		});				
 						
 //	code repurposed from http://codepen.io/Sheepeuh/pen/cFazd
 	
